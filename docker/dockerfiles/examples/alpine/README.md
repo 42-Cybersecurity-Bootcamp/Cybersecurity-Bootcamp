@@ -2,6 +2,10 @@
 
 <br>
 
+Alpine is a linux distro intended to be very lightweight, perfect for using it to create docker images.
+
+<br>
+
 Docker is microservice oriented, then each image must do an only single thing. Docker
 commands allows you to run a single container at the same time, Docker compose allows
 you to run and manage many containers at once. 
