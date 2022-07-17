@@ -6,7 +6,7 @@
 /*   By: ciclo <ciclo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 09:52:02 by dugonzal          #+#    #+#             */
-/*   Updated: 2022/07/14 15:34:36 by ciclo            ###   ########.fr       */
+/*   Updated: 2022/07/17 12:20:39 by ciclo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,16 @@ operacion de obtencion de dos primos y su producto (módulo)
       num1 = num2;
       num2 = temp;
     }
+
+
+step 0. antes de leer la clave publica tenemos que generar una clave publica
 */
 
 int	main(void)
 {
 	int	fd;
 
-	fd = open ("keys/key_public.txt", O_WRONLY);
+	fd = open ("keys/key_public.txt", O_WRONLY); // lectura de la clave publica
 	printf ("%d\n", fd);
 	close (fd);
 }
