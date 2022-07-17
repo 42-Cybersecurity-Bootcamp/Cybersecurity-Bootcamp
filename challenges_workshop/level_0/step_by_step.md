@@ -2,7 +2,7 @@
 
 # vamos a crear una imagen desde un archivo dockerfile
 
- 1. primero hacemos `FROM` y el nombre de la imagen base que queremos usar, ene ste caso es ubuntu:22.04
+ 1. primero hacemos `FROM` y el nombre de la imagen base que queremos usar, en este caso es ubuntu:22.04
 
  2. luego con `RUN` le indicamos que tiene que hacer en la construcion del contenedor.
 
