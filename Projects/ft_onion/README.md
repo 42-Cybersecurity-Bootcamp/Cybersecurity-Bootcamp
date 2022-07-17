@@ -8,7 +8,7 @@
 	3.2 Change /var/www/html/index.html -> "Up to you"
 4. Install tor. \
 	4.1 /etc/tor/torrc \
- 	Uncomment	#HiddenServiceDir /var/lib/tor/hidden_service/ \
-			#HiddenServicePort 80 127.0.0.1:80 \
+ 	Uncomment\	#HiddenServiceDir /var/lib/tor/hidden_service/ \
+\	\	\	#HiddenServicePort 80 127.0.0.1:80 \
 	4.2 service tor restart 
 5. cat /var/lib/tor/hidden_service/hostname <- xxx.onion will be here 
