@@ -16,9 +16,19 @@ To use docker compose, you need to install it. In debian:
 
 `sudo apt-get install docker-compose-plugin`
 
+Configure "image:" name of compose.yaml file with your image name (ex.
+
 Build your image
 
 `docker build -t tor_image:v1`
+
+Configure "image:" name of compose.yaml file with your image name 
+
+`...
+tor:
+  image: tor_image:v1
+...
+`
 
 Now we use compose to run a container
 
