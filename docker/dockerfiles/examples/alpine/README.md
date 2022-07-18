@@ -1,4 +1,4 @@
-### Create a docker image with Alpine and Tor using docker compose.
+# Create a docker image with Alpine and Tor using docker compose.
 
 <br>
 
@@ -14,25 +14,35 @@ you to run and manage many containers at once.
 
 To use docker compose, you need to install it. In debian:
 
-`sudo apt-get install docker-compose-plugin`
+````
+sudo apt-get install docker-compose-plugin
+````
 
-Configure "image:" name of compose.yaml file with your image name (ex.
+
+
+<br>
 
 Build your image
 
-`docker build -t tor_image:v1`
+````
+docker build -t tor_image:v1
+````
 
-Configure "image:" name of compose.yaml file with your image name 
+Configure "image:" name of compose.yaml file with your image name
+>In 42 mac's, "compose.yaml" must be rename to "docker-compose.yaml"
 
-`...
+````yaml
+...
 tor:
   image: tor_image:v1
 ...
-`
+````
 
 Now we use compose to run a container
 
-`docker compose up -d`
+````
+docker compose up -d
+````
 
 If you put 0.0.0.0:9050 in your browser, our SOCKS proxy is working!
 
@@ -42,7 +52,7 @@ You can use `docker compose ps` too to see running containers.
 
 <br>
 
-### Stop the container
+## Stop the container
 
 <br>
 
