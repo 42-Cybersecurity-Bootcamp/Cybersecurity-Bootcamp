@@ -37,7 +37,7 @@ k = 2
 d = (1 + (k*phi))/e
 
 # Message to be encrypted
-msg = 12.0
+msg = 31
 
 print("Message data = ", msg)
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   corsair.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ciclo <ciclo@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dugonzal <dugonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 13:55:02 by ciclo             #+#    #+#             */
-/*   Updated: 2022/07/17 13:56:33 by ciclo            ###   ########.fr       */
+/*   Updated: 2022/07/18 16:23:11 by dugonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 # define CORS_AIR_H
 # include <stdio.h>
 # include <math.h>
-# include <openssl/bn.h>
-
+# include <openssl/ssl.h>
+# include <openssl/rsa.h>
+# include <openssl/x509.h>
+# include <openssl/evp.h>
 # include <string.h>
 # include <unistd.h>
 # include <fcntl.h>

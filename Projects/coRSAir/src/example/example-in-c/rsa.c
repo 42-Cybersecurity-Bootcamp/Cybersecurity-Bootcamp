@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rsa-0.c                                            :+:      :+:    :+:   */
+/*   rsa.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ciclo <ciclo@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dugonzal <dugonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 14:24:47 by ciclo             #+#    #+#             */
-/*   Updated: 2022/07/17 14:30:35 by ciclo            ###   ########.fr       */
+/*   Updated: 2022/07/18 15:07:07 by dugonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 #include <math.h>
 #include <stdio.h>
 
-// Returns gcd of a and b
+// Returns gcd of a and h
 int	gcd(int a, int h)
 {
 	int	temp;
 
 	while (1)
 	{
-		temp = a % h;
+		temp = a % h; //
 		if (temp == 0)
 			return (h);
 		a = h;
