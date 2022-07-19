@@ -13,8 +13,7 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "chingc/win10"
-
-  config.vm.communicator = "winrm"
+	config.vm.communicator = "winrm"
 config.vm.guest = "windows"
 
 config.winrm.username = "IEUser"
@@ -23,7 +22,7 @@ config.winrm.timeout = 180
 
 config.ssh.username = "IEUser"
 config.ssh.password = "Passw0rd!"
-config.ssh.extra_args = "powershell"  # cmd or powershell
+config.ssh.extra_args = "cmd"  # cmd or powershell
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
