@@ -1,0 +1,49 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+require_relative "../settings"
+
+
+Vagrant.configure("2") do |config|
+
+    config.vm.box = "chingc/win10"
+    config.vm.communicator = "winrm"
+    config.vm.guest = "windows"
+    config.vm.hostname = Settings::NAME
+
+    config.winrm.username = "IEUser"
+    config.winrm.password = "Passw0rd!"
+    config.winrm.timeout = 180
+
+    config.ssh.username = "IEUser"
+    config.ssh.password = "Passw0rd!"
+    config.ssh.extra_args = "cmd"  # cmd or powershell
+
+    config.vm.provider "virtualbox" do |vbox|
+        vbox.gui = true
+        vbox.linked_clone = true
+
+        Settings::VBOX.each do |setting, value|
+            vbox.customize ["modifyvm", :id, setting, value]
+        end
+    end
+
+    # config.vm.network "forwarded_port", guest: 80, host: 8080, auto_correct: true
+    # config.vm.network "public_network"
+
+    # config.vm.synced_folder "source", "C:/dest"
+
+    Dir.glob("run_once/*.ps1").sort.each do |script|
+        config.vm.provision "shell", path: script, name: script
+    end
+
+    Dir.glob("run_always/*.ps1").sort.each do |script|
+        config.vm.provision "shell", path: script, name: script, run: "always"
+    end
+
+    config.vm.post_up_message = <<~MSG
+        - Just provisioned? `vagrant reload` recommended
+        - Username/Password: IEUser/Passw0rd!
+    MSG
+
+end
