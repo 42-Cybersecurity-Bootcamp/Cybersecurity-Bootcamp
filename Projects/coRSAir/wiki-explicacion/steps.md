@@ -2,7 +2,7 @@ Lea la clave pública de estos certificados y obtenga el módulo y exponente. Ca
 el resto de los datos necesarios.
 
 
-obteber el resto de los datos
+obtenber el resto de los datos
 
 
 # modulo y exponente
