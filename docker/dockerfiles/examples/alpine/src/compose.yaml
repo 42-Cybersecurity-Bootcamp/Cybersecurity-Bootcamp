@@ -2,7 +2,8 @@ version: '3'
 
 services:
   tor:
-    image: <IMAGENAME>
+    container_name: tor_tontainer
+    build: .
     restart: always
     ports:
       - 127.0.0.1:9050:9050
