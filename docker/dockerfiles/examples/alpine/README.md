@@ -18,26 +18,14 @@ To use docker compose, you need to install it. In debian:
 sudo apt-get install docker-compose-plugin
 ````
 
-
-
 <br>
 
-
-Configure "image:" name of compose.yaml file with your image name
->In 42 mac's, "compose.yaml" must be rename to "docker-compose.yaml"
-
-````yaml
-...
-tor:
-  image: tor_image:v1
-...
-````
-
-Now we use compose to build image and run the container
+Use compose to build image and run the container
 
 ````
 docker compose up -d
 ````
+<br>
 
 If you put 0.0.0.0:9050 in your browser, our SOCKS proxy is working!
 
