@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   corsair.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dugonzal <dugonzal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ciclo <ciclo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 13:55:02 by ciclo             #+#    #+#             */
-/*   Updated: 2022/07/20 19:55:07 by dugonzal         ###   ########.fr       */
+/*   Updated: 2022/07/28 09:15:28 by ciclo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,5 @@
 # include <stdio.h>
 # include <math.h>
 # include <stdlib.h>
-//# define BUFF_SIZE 32
-char	*ft_strjoin(char *full, char *buffer);
-int		ft_slen(char *string, char c);
 
 #endif
