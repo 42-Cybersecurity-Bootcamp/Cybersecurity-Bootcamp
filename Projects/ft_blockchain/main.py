@@ -51,7 +51,7 @@ class Blockchain:
 		while check_proof is False:
 			hash_operation = hashlib.sha256(
 				str(new_proof**2 - previous_proof**2).encode()).hexdigest()
-			if hash_operation[:5] == '04242':
+			if hash_operation[:5] == '00000':
 				check_proof = True
 			else:
 				new_proof += 1
