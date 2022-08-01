@@ -6,7 +6,7 @@
 /*   By: vscode <vscode@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 09:52:02 by dugonzal          #+#    #+#             */
-/*   Updated: 2022/07/31 20:30:33 by vscode           ###   ########.fr       */
+/*   Updated: 2022/08/01 15:06:04 by vscode           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,14 @@ void ft_generate_keys(RSA **pub)
 	PEM_write_bio_RSAPublicKey(bp_public, key); // write public key to file
 	// free memory
 	BIO_free_all(bp_public); // free BIO structure
+}
+
+// forma de crear una funcion sin poner nada dentro
+void ft_(void)
+{
+	BIO *priv = NULL;
+	
+
 }
 
 int	main(void)
