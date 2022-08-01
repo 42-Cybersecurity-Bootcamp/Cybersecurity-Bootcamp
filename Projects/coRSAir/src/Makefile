@@ -3,39 +3,40 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dugonzal <dugonzal@student.42.fr>          +#+  +:+       +#+         #
+#    By: vscode <vscode@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 09:31:18 by dugonzal          #+#    #+#              #
-#    Updated: 2022/07/20 21:40:03 by dugonzal         ###   ########.fr        #
+#    Updated: 2022/07/31 15:08:15 by vscode           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = corsair.a
 
-SRC = corsair.c
+SRC = corsair.c corsair_utils.c
 
-#OBJ = $(SRC:.c=.o)
+OBJ = $(SRC:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror
 
-SANITIZE = -fsanitize=address -fsanitize=undefined
+SANITIZE = fsanitize-all-undefined -fno-sanitize-recover=all
 
 CC = gcc
 
 all:
-		@$(CC) $(FLAGS)  $(SANITIZE) $(SRC) -o $(NAME) && ./corsair.a
-	@echo "clave publica y privada creadas"
+		@$(CC) -I/usr/include/openssl/ $(FLAGS)  $(SRC) -o $(NAME) -lcrypto -ldl -lssl && ./$(NAME)
+#keys:
+#		@$(CC) -I/usr/include/openssl/ $(FLAGS)  $(SRC) -o $(NAME) -lcrypto -ldl  && ./corsair.a
+	@echo "\n                    compilacion done"
 clean :
 	@rm -f $(NAME) $(OBJ)
 	@echo "Clean done"
-cifrar_mensaje:
-	 @openssl rsautl -encrypt -pubin -inkey keys/public.key -in mensaje/mensaje.txt -out encrypt/mensaje.enc
-	 @echo "Mensaje cifrado"
-decifrar_mensaje:
-	openssl rsautl -decrypt -inkey keys/private.key -in encrypt/mensaje.enc -out decencriptado/mensaje.dec
+
 fclean : clean
 	@rm -f $(NAME)
 	@echo "Full clean done"
+
 re : clean fclean all
 	@echo "Re-compilation done"
-
+out:
+	./$(NAME)
+	@echo "output done"

@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corsair.h                                          :+:      :+:    :+:   */
+/*   corsair_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vscode <vscode@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/17 13:55:02 by ciclo             #+#    #+#             */
-/*   Updated: 2022/07/31 15:33:18 by vscode           ###   ########.fr       */
+/*   Created: 2022/07/31 15:06:25 by vscode            #+#    #+#             */
+/*   Updated: 2022/07/31 15:08:54 by vscode           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef  CORS_AIR_H
-# define CORS_AIR_H
+#include "corsair.h"
 
-#include <openssl/rsa.h>
-#include <openssl/pem.h>
-#include <openssl/err.h>
-#include <stdio.h>
-#include <string.h>
-#include <string.h>
-#include <fcntl.h>
+size_t ft_strlen(const unsigned char *str)
+{
+	size_t i;
 
-#include <unistd.h>
-
-
-size_t ft_strlen(const unsigned char *str);
-
-#endif
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
