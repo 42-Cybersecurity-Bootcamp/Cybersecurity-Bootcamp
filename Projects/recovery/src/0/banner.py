@@ -1,5 +1,5 @@
 from colorama import Fore, Style
-import colorama, random
+import colorama
 
 colorama.init()
 
@@ -39,4 +39,4 @@ banner = Style.BRIGHT + Fore.LIGHTGREEN_EX + r'''
 │ By dugonzal   │               recovery                │   Version: 1.0.0   │
 └────────────────────────────────────────────────────────────────────────────┘
 ''' + Style.RESET_ALL
-#print (banner)
+print(banner)
